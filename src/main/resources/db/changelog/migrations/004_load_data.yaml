@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: helen
+      changes:
+        - loadUpdateData:
+            file: classpath:/db/data/books_user.csv
+            tableName: user
+            encoding: UTF-8
+            quotchar: '"'
+            separator: ;
+            primaryKey: id
+            columns:
+              - column:
+                  header: id
+                  name: id
+                  type: NUMERIC
+              - column:
+                  header: name
+                  name: name
+                  type: STRING

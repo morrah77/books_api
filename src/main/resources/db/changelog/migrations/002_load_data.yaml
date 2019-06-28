@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: helen
+      changes:
+        - loadUpdateData:
+            file: classpath:/db/data/books_author_uniq.csv
+            tableName: author
+            encoding: UTF-8
+            quotchar: '"'
+            separator: ;
+            primaryKey: id
+            columns:
+              - column:
+                  header: Auther
+                  name: title
+                  type: STRING
+        - loadUpdateData:
+            file: classpath:/db/data/books_genre_uniq.csv
+            tableName: genre
+            encoding: UTF-8
+            quotchar: '"'
+            separator: ;
+            primaryKey: id
+            columns:
+              - column:
+                  header: Genre
+                  name: title
+                  type: STRING

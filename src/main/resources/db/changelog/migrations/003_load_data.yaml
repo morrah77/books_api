@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: helen
+      changes:
+        - customChange:
+            class: com.morrah77.books.data.loader.DataLoaderLBTask
+            param:
+              name: file
+              value: classpath:/db/data/books.csv

@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - include:
+      file: migrations/001_initial.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: migrations/002_load_data.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: migrations/003_load_data.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: migrations/004_load_data.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: migrations/005_load_data.yaml
+      relativeToChangelogFile: true

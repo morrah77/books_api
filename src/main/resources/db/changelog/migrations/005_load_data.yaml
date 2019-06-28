@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: helen
+      changes:
+        - loadUpdateData:
+            file: classpath:/db/data/books_assess.csv
+            tableName: assess
+            encoding: UTF-8
+            quotchar: '"'
+            separator: ;
+            primaryKey: id
+            columns:
+              - column:
+                  header: ASIN
+                  name: book_id
+                  type: NUMERIC
+              - column:
+                  header: User
+                  name: user_id
+                  type: NUMERIC
+              - column:
+                  header: Assess
+                  name: value
+                  type: NUMERIC
